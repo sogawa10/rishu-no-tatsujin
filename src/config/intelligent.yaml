@@ -1,0 +1,65 @@
+program: インテリジェント情報工学科
+annual_credit_cap: 48
+term_credit_cap: 30
+term_credit_min: 2
+label_thresholds:
+  min_students: 20
+  difficult_f_rate: 25
+  recommend_a_rate: 30
+  recommend_f_rate: 10
+requirements:
+  id: 合計
+  min_credits: 128
+  children:
+    - id: 必修
+      match: { 科目区分1: 必修 }
+      min_credits: 11
+    - id: 選択
+      match: { 科目区分1: 選択 }
+      min_credits: 117
+      children:
+        - id: A
+          match: { 科目区分2: A }
+          min_credits: 86
+          children:
+            - id: Ⅰ
+              match: { 科目区分3: Ⅰ }
+              min_credits: 77
+              children:
+                - id: 1a
+                  match: { 科目区分4: 1a }
+                  min_credits: 2
+                - id: 1b
+                  match: { 科目区分4: 1b }
+                  min_credits: 4
+                  must_register: true
+                - id: 1c
+                  match: { 科目区分4: 1c }
+                  min_credits: 4
+                  must_register: true
+                - id: 1d
+                  match: { 科目区分4: 1d }
+                  min_credits: 10
+                  must_register: true
+                - id: '2'
+                  match: { 科目区分4: '2' }
+                  min_credits: null
+            - id: Ⅱ
+              match: { 科目区分3: Ⅱ }
+              min_credits: null
+        - id: B
+          match: { 科目区分2: B }
+          min_credits: 22
+          children:
+            - id: Ⅰ
+              match: { 科目区分3: Ⅰ }
+              min_credits: 8
+            - id: Ⅱ
+              match: { 科目区分3: Ⅱ }
+              min_credits: 4
+            - id: Ⅲ
+              match: { 科目区分3: Ⅲ }
+              min_credits: 10
+        - id: C
+          match: { 科目区分2: C }
+          min_credits: null
