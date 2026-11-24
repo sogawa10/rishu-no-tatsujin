@@ -37,3 +37,9 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Claude code
+CLAUDE.md
+
+# 資料
+docs/
