@@ -1,0 +1,19 @@
+program: 情報工学専攻
+annual_credit_cap: null
+term_credit_cap: null
+term_credit_min: null
+label_thresholds:
+  min_students: 20
+  difficult_f_rate: 25
+  recommend_a_rate: 30
+  recommend_f_rate: 10
+requirements:
+  id: 合計
+  min_credits: 30
+  children:
+    - id: 必修
+      match: { 科目区分1: 必修 }
+      min_credits: 8
+    - id: 選択
+      match: { 科目区分1: 選択 }
+      min_credits: null
