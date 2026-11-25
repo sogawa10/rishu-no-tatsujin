@@ -60,6 +60,10 @@ requirements:
             - id: Ⅲ
               match: { 科目区分3: Ⅲ }
               min_credits: 10
+              children:
+                - id: 同志社科目
+                  match: { 科目区分4: 同志社科目 }
+                  min_credits: 2
         - id: C
           match: { 科目区分2: C }
           min_credits: null

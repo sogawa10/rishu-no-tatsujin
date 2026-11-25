@@ -17,3 +17,8 @@ requirements:
     - id: 選択
       match: { 科目区分1: 選択 }
       min_credits: null
+      children:
+        - id: 専攻共通特殊講義
+          match: { 科目区分2: 専攻共通特殊講義 }
+          min_credits: null
+          max_credits: 6
